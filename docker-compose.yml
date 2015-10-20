@@ -1,0 +1,13 @@
+drill:
+  build: .
+  ports:
+   - "8047:8047"
+  links:
+   - zookeeper
+
+zookeeper:
+  image: jplock/zookeeper
+  ports:
+    - "2181:2181"
+    - "2888:2888"
+    - "3888:3888"
